@@ -8,7 +8,6 @@ import '../choose_payment_method/choose_payment_method_screen.dart';
 
 class AddVisaCardScreen extends StatelessWidget {
   const AddVisaCardScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

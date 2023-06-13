@@ -3,16 +3,16 @@ import '../../utils/colors_manager.dart';
 import '../settings/settings.dart';
 
 
-class MyHomeScreen extends StatefulWidget {
+class MyWorkSpaceHomeScreen extends StatefulWidget {
 
 
-   MyHomeScreen({Key? key}) : super(key: key);
+  MyWorkSpaceHomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<MyHomeScreen> createState() => _MyHomeScreenState();
+  State<MyWorkSpaceHomeScreen> createState() => _MyHomeScreenState();
 }
 
-class _MyHomeScreenState extends State<MyHomeScreen> {
+class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
   var drawerIndexClicked = 0;
 
   @override
@@ -36,7 +36,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
 
                 'assets/icons/menu.png',
               ))
-                ,
+              ,
 
             );
 
@@ -114,7 +114,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                             children: [
                               Image(image:
                               AssetImage(
-                                'assets/icons/home.png'
+                                  'assets/icons/home.png'
                               )
                               ),
                               SizedBox(
@@ -124,14 +124,14 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                                 'Home',
                                 style: TextStyle(
                                   color: ColorsManager.baseColor,
-                                  fontSize: 25,
+                                  fontSize: 21,
                                 ),
                               ),
 
                               Spacer(),
 
                               Image(image: AssetImage(
-                                'assets/icons/left_arrow.png'
+                                  'assets/icons/left_arrow.png'
                               ))
                             ],
                           ),
@@ -169,10 +169,10 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                                 width: 10,
                               ),
                               Text(
-                                'Account',
+                                'Profile Info',
                                 style: TextStyle(
                                   color: ColorsManager.baseColor,
-                                  fontSize: 25,
+                                  fontSize: 21,
                                 ),
                               ),
 
@@ -215,17 +215,18 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                                 width: 10,
                               ),
                               Text(
-                                'Bookings',
+                                'WorkSpace Info',
+                                overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   color: ColorsManager.baseColor,
-                                  fontSize: 25,
+                                  fontSize: 21,
                                 ),
                               ),
 
                               Spacer(),
 
                               Image(image: AssetImage(
-                                  'assets/icons/right_arrow.png',
+                                'assets/icons/right_arrow.png',
                               ))
                             ],
                           ),
@@ -254,17 +255,20 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                             children: [
                               Image(image:
                               AssetImage(
-                                  'assets/icons/inbox.png'
+                                  'assets/icons/workspace_vacancy.png'
                               )
                               ),
                               SizedBox(
                                 width: 5,
                               ),
                               Text(
-                                'Inbox',
+
+                                'WorkSpace vacancy',
+                                overflow: TextOverflow.ellipsis,
+
                                 style: TextStyle(
                                   color: ColorsManager.baseColor,
-                                  fontSize: 25,
+                                  fontSize: 21,
                                 ),
                               ),
 
@@ -310,7 +314,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                                 'Help Center',
                                 style: TextStyle(
                                   color: ColorsManager.baseColor,
-                                  fontSize: 25,
+                                  fontSize: 21,
                                 ),
                               ),
 
@@ -356,7 +360,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                                 'About Us',
                                 style: TextStyle(
                                   color: ColorsManager.baseColor,
-                                  fontSize: 25,
+                                  fontSize: 21,
                                 ),
                               ),
 
@@ -405,7 +409,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                                 'Settings',
                                 style: TextStyle(
                                   color: ColorsManager.baseColor,
-                                  fontSize: 25,
+                                  fontSize: 21,
                                 ),
                               ),
 

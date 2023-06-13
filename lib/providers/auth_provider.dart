@@ -72,7 +72,7 @@ class AuthProvider extends ChangeNotifier {
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(
-          builder: (crx) => const MyHomeScreen(),
+          builder: (crx) =>  MyHomeScreen(),
         ),
         (route) => false,
       );

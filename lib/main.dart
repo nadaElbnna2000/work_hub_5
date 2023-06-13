@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:work_hub_5/providers/auth_provider.dart';
 import 'package:work_hub_5/utils/colors_manager.dart';
+import 'package:work_hub_5/view/abous-us/about_us.dart';
+import 'package:work_hub_5/view/booking_workspace.dart';
 import 'package:work_hub_5/view/edit_profile/edit_profile.dart';
 import 'package:work_hub_5/view/home/my_home_screen.dart';
 import 'package:work_hub_5/view/inbox/inbox_sreen.dart';
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: ColorsManager.primaryColor,
         primaryColor: ColorsManager.primaryColor,
       ),
-      home: EditProfile(),
+      home: BookingWorkspace(),
     );
     //kdkd
   }

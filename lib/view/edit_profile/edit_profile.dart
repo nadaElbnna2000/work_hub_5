@@ -117,11 +117,6 @@ class EditProfile extends StatelessWidget {
                 ),
               ),
 
-
-
-
-
-
               SizedBox(
                 height:20 ,
               ),
@@ -146,10 +141,6 @@ class EditProfile extends StatelessWidget {
                   filled: true,
                 ),
               ),
-
-
-
-
 
               SizedBox(
                 height:20 ,
@@ -176,10 +167,6 @@ class EditProfile extends StatelessWidget {
                 ),
               ),
 
-
-
-
-
               SizedBox(
                 height:20 ,
               ),
@@ -204,10 +191,6 @@ class EditProfile extends StatelessWidget {
                   filled: true,
                 ),
               ),
-
-
-
-
 
 
             ],

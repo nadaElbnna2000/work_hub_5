@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../utils/colors_manager.dart';
+import '../home/my_home_screen.dart';
 import '../settings/settings.dart';
-
 
 class MyWorkSpaceHomeScreen extends StatefulWidget {
 
@@ -13,7 +13,16 @@ class MyWorkSpaceHomeScreen extends StatefulWidget {
 }
 
 class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
-  var drawerIndexClicked = 0;
+
+  bool homeSelected=true;
+  bool profileSelected=false;
+  bool workspaceInfoSelected=false;
+  bool workspaceVacancySelected=false;
+  bool helpCenterSelected=false;
+  bool aboutUsSelected=false;
+  bool settingsSelected=false;
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +81,7 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
                             onTap: (){
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => const Settings()),
+                                MaterialPageRoute(builder: (context) =>  MyHomeScreen()),
                               );
                             },
                             child: Image(image: AssetImage(
@@ -92,17 +101,30 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
 
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+                          setState(() {
+                            homeSelected = !homeSelected;
+                            profileSelected = false;
+
+                            workspaceInfoSelected = false;
+                            workspaceVacancySelected = false;
+                            helpCenterSelected=false;
+                            aboutUsSelected=false;
+                            settingsSelected=false;
+
+                          });
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => const Settings()),
+                          // );
                         },
                         child: Container(
 
 
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.purple20,
+                            color: homeSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -144,17 +166,30 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
 
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => const Settings()),
+                          // );
+                          setState(() {
+                            profileSelected = !profileSelected;
+                            homeSelected=false;
+                            workspaceInfoSelected = false;
+                            workspaceVacancySelected = false;
+                            helpCenterSelected=false;
+                            aboutUsSelected=false;
+                            settingsSelected=false;
+
+                          });
+
                         },
                         child: Container(
 
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: profileSelected==true
+                            ?ColorsManager.purple20
+                            :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -191,16 +226,27 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
                       ),
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
-                        },
+                          setState(() {
+                            workspaceInfoSelected = !workspaceInfoSelected;
+                            homeSelected=false;
+                            workspaceVacancySelected = false;
+                            profileSelected=false;
+                            helpCenterSelected=false;
+                            aboutUsSelected=false;
+                            settingsSelected=false;
+                          });
+                        //   Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(builder: (context) => const Settings()),
+                        //   );
+                         },
                         child: Container(
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: workspaceInfoSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -237,17 +283,30 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
                         height: 15,
                       ),
                       InkWell(
+
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+                          setState(() {
+                            workspaceVacancySelected = !workspaceVacancySelected;
+
+                            workspaceInfoSelected = false;
+                            homeSelected=false;
+                            profileSelected=false;
+                            helpCenterSelected=false;
+                            aboutUsSelected=false;
+                            settingsSelected=false;
+                          });
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => const Settings()),
+                          // );
                         },
                         child: Container(
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: workspaceVacancySelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -287,16 +346,30 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
                       ),
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+                          setState(() {
+                            helpCenterSelected = !helpCenterSelected;
+
+
+                            homeSelected=false;
+                            workspaceVacancySelected = false;
+                            workspaceInfoSelected=false;
+                            profileSelected=false;
+                            aboutUsSelected=false;
+                            settingsSelected=false;
+
+                          });
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => const Settings()),
+                          // );
                         },
                         child: Container(
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: helpCenterSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -333,16 +406,29 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
                       ),
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+                          setState(() {
+                            aboutUsSelected = !aboutUsSelected;
+                            workspaceInfoSelected=false;
+
+                            homeSelected=false;
+                            workspaceVacancySelected = false;
+                            profileSelected=false;
+                            helpCenterSelected=false;
+                            settingsSelected=false;
+
+                          });
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => const Settings()),
+                          // );
                         },
                         child: Container(
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: aboutUsSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -382,16 +468,28 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
 
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+                          setState(() {
+                            settingsSelected = !settingsSelected;
+                            homeSelected=false;
+                            workspaceInfoSelected=false;
+
+                            workspaceVacancySelected = false;
+                            profileSelected=false;
+                            helpCenterSelected=false;
+                            aboutUsSelected=false;
+                          });
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => const Settings()),
+                          // );
                         },
                         child: Container(
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: settingsSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),

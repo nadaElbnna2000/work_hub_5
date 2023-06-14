@@ -1,12 +1,29 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:work_hub_5/utils/colors_manager.dart';
 
 import '../settings/settings.dart';
 
-class WorkSpaceVacancyScreen extends StatelessWidget {
-  const WorkSpaceVacancyScreen({Key? key}) : super(key: key);
+class WorkSpaceVacancyScreen extends StatefulWidget {
+   WorkSpaceVacancyScreen({Key? key}) : super(key: key);
+
+
+   @override
+  State<WorkSpaceVacancyScreen> createState() => _WorkSpaceVacancyScreenState();
+}
+
+class _WorkSpaceVacancyScreenState extends State<WorkSpaceVacancyScreen> {
+
+
+  var availablePrivateOffice = 10;
+  var privateOfficeVacancies = 5;
+  var availableRooms = 10;
+  var roomVacancies = 4;
+  var availableDesks = 10;
+  var deskVacancies = 2;
+
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +115,7 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
                               height: 15,
                             ),
                             Text(
-                                'Available Rooms: 4',
+                                'Available Rooms : $availableRooms',
                               style: TextStyle(
                                 color: ColorsManager.baseColor,
                                 fontWeight: FontWeight.w600,
@@ -110,7 +127,7 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
                               height: 15,
                             ),
                             Text(
-                              'Rooms Vacancies: 2',
+                              'Rooms Vacancies: $roomVacancies',
                               style: TextStyle(
                                 color: ColorsManager.baseColor,
                                 fontWeight: FontWeight.w600,
@@ -135,7 +152,22 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
                                   width: 140,
                                   child: TextButton(
 
-                                      onPressed: (){},
+                                      onPressed: (){
+
+
+                                        setState(() {
+
+                                          if(roomVacancies<availableRooms){
+
+                                            roomVacancies+=1;
+
+                                          } else{
+
+                                          }
+
+                                        });
+
+                                      },
                                       child: Text(
                                         '+1 Room',
                                         style: TextStyle(
@@ -160,7 +192,16 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
 
                                   child: TextButton(
 
-                                    onPressed: (){},
+                                    onPressed: (){
+
+                                      setState(() {
+                                        if(roomVacancies>0){
+                                        roomVacancies -= 1;
+                                      }
+                                      else{
+                                      }
+                                      });
+                                    },
                                     child: Text(
                                       '-1 Room',
                                       style: TextStyle(
@@ -207,9 +248,15 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
 
                             ),
                           ),
+
+
                           Spacer(),
-                          Image(image:
-                          AssetImage('assets/icons/up_arrow.png')),
+
+                          Image(
+                              image:
+                          AssetImage(
+                              'assets/icons/up_arrow.png'
+                          )),
 
                         ],
                       ),
@@ -227,7 +274,7 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
                               height: 15,
                             ),
                             Text(
-                              'Available Private Office: 3',
+                              'Available Private Office: $availablePrivateOffice',
                               style: TextStyle(
                                 color: ColorsManager.baseColor,
                                 fontWeight: FontWeight.w600,
@@ -239,7 +286,7 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
                               height: 15,
                             ),
                             Text(
-                              'Private Office Vacancies: 2',
+                              'Private Office Vacancies: $privateOfficeVacancies',
                               style: TextStyle(
                                 color: ColorsManager.baseColor,
                                 fontWeight: FontWeight.w600,
@@ -264,7 +311,20 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
                                   width: 140,
                                   child: TextButton(
 
-                                    onPressed: (){},
+                                    onPressed: (){
+
+
+                                      setState(() {
+                                        if(privateOfficeVacancies<availablePrivateOffice) {
+                                          privateOfficeVacancies += 1;
+                                        }
+                                        else{
+                                        }
+                                      });
+
+
+
+                                    },
                                     child: Text(
                                       '+1 Office',
                                       style: TextStyle(
@@ -289,7 +349,17 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
 
                                   child: TextButton(
 
-                                    onPressed: (){},
+                                    onPressed: (){
+
+                                      setState(() {
+                                        if(privateOfficeVacancies>0) {
+                                          privateOfficeVacancies -= 1;
+                                        }
+                                        else{
+                                        }
+                                      });
+
+                                    },
                                     child: Text(
                                       '-1 Office',
                                       style: TextStyle(
@@ -359,7 +429,7 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
                               height: 15,
                             ),
                             Text(
-                              'Available Desks: 4',
+                              'Available Desks: $availableDesks',
                               style: TextStyle(
                                 color: ColorsManager.baseColor,
                                 fontWeight: FontWeight.w600,
@@ -371,7 +441,7 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
                               height: 15,
                             ),
                             Text(
-                              'Desks Vacancies: 2',
+                              'Desks Vacancies: $deskVacancies',
                               style: TextStyle(
                                 color: ColorsManager.baseColor,
                                 fontWeight: FontWeight.w600,
@@ -396,7 +466,20 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
                                   width: 140,
                                   child: TextButton(
 
-                                    onPressed: (){},
+                                    onPressed: (){
+
+                                      setState(() {
+                                        if(deskVacancies<availableDesks) {
+                                          deskVacancies += 1;
+                                        }
+                                        else{
+                                        }
+                                      });
+
+
+
+
+                                    },
                                     child: Text(
                                       '+1 Desks',
                                       style: TextStyle(
@@ -421,7 +504,17 @@ class WorkSpaceVacancyScreen extends StatelessWidget {
 
                                   child: TextButton(
 
-                                    onPressed: (){},
+                                    onPressed: (){
+
+
+                                      setState(() {
+                                        if(deskVacancies>0) {
+                                          deskVacancies -= 1;
+                                        }
+                                        else{
+                                        }
+                                      });
+                                    },
                                     child: Text(
                                       '-1 Desks',
                                       style: TextStyle(

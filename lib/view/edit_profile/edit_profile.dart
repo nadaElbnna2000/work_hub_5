@@ -2,10 +2,27 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../utils/colors_manager.dart';
 import '../../utils/fonts_manager.dart';
+import '../../utils/padding_manager.dart';
+import '../choose_payment_method/choose_payment_method_screen.dart';
 import '../settings/settings.dart';
 
-class EditProfile extends StatelessWidget {
+class EditProfile extends StatefulWidget {
   const EditProfile({Key? key}) : super(key: key);
+
+  @override
+  State<EditProfile> createState() => _EditProfileState();
+}
+
+class _EditProfileState extends State<EditProfile> {
+
+
+  var firstNameController = TextEditingController();
+  var lastNameController = TextEditingController();
+  var emailAddressController = TextEditingController();
+  var phoneController = TextEditingController();
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -109,6 +126,7 @@ class EditProfile extends StatelessWidget {
               ),
 
               TextFormField(
+                controller: firstNameController,
                 decoration: InputDecoration(
                   hintText: 'Nada',
                   border: InputBorder.none,
@@ -139,6 +157,7 @@ class EditProfile extends StatelessWidget {
               ),
 
               TextFormField(
+                controller: lastNameController,
                 decoration: InputDecoration(
                   hintText: ' Elbanna',
                   border: InputBorder.none,
@@ -168,6 +187,7 @@ class EditProfile extends StatelessWidget {
               ),
 
               TextFormField(
+                controller: emailAddressController,
                 decoration: InputDecoration(
                   hintText: 'nadaelbanna105@gmail.com',
                   border: InputBorder.none,
@@ -197,6 +217,7 @@ class EditProfile extends StatelessWidget {
               ),
 
               TextFormField(
+                controller: phoneController,
                 decoration: InputDecoration(
                   hintText: '01091280003',
                   border: InputBorder.none,
@@ -204,6 +225,69 @@ class EditProfile extends StatelessWidget {
                   filled: true,
                 ),
               ),
+
+
+
+              SizedBox(
+                height: 35,
+              ),
+
+
+
+
+              Center(
+                child: TextButton(
+                  onPressed: () {
+                    print(firstNameController.text);
+                    print(lastNameController.text);
+                    print(emailAddressController.text);
+                    print(phoneController.text);
+
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (ctx) =>  ChoosePaymentMethodScreen(),
+                    //   ),
+                    // );
+                  },
+                  style: ButtonStyle(
+                    overlayColor: MaterialStateProperty.all(Colors.transparent),
+                  ),
+                  child: Container(
+
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: ColorsManager.baseColor,
+                    ),
+                    padding:  EdgeInsets.symmetric(
+                        horizontal: PaddingManager.padding50,
+                        vertical: PaddingManager.padding12),
+                    child: const Text(
+                      'save',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: FontsManager.font26,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

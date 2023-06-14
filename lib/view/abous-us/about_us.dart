@@ -61,7 +61,7 @@ class AboutUs extends StatelessWidget {
 
 
             Container(
-              height: 350,
+              height: 400,
 
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(7)),

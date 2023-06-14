@@ -13,7 +13,18 @@ class MyHomeScreen extends StatefulWidget {
 }
 
 class _MyHomeScreenState extends State<MyHomeScreen> {
-  var drawerIndexClicked = 0;
+
+
+
+  bool homeSelected=true;
+  bool profileSelected=false;
+  bool bookingsSelected=false;
+  bool inboxSelected=false;
+  bool helpCenterSelected=false;
+  bool aboutUsSelected=false;
+  bool settingsSelected=false;
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +83,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                             onTap: (){
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => const Settings()),
+                                MaterialPageRoute(builder: (context) =>  MyHomeScreen()),
                               );
                             },
                             child: Image(image: AssetImage(
@@ -92,17 +103,30 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
 
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+
+                          setState(() {
+                            homeSelected = !homeSelected;
+                            profileSelected = false;
+
+                            bookingsSelected = false;
+                            inboxSelected = false;
+                            helpCenterSelected=false;
+                            aboutUsSelected=false;
+                            settingsSelected=false;
+
+                          });
+
+
+
                         },
                         child: Container(
 
 
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.purple20,
+                            color: homeSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -144,17 +168,26 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
 
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+
+                          setState(() {
+                            profileSelected = !profileSelected;
+                            homeSelected=false;
+                            bookingsSelected = false;
+                            inboxSelected = false;
+                            helpCenterSelected=false;
+                            aboutUsSelected=false;
+                            settingsSelected=false;
+
+                          });
                         },
                         child: Container(
 
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: profileSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -191,16 +224,27 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                       ),
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+
+                          setState(() {
+                            bookingsSelected = !bookingsSelected;
+                            homeSelected=false;
+                            inboxSelected = false;
+                            profileSelected=false;
+                            helpCenterSelected=false;
+                            aboutUsSelected=false;
+                            settingsSelected=false;
+                          });
+
+
+
                         },
                         child: Container(
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: bookingsSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -237,16 +281,24 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                       ),
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+                          setState(() {
+                            inboxSelected = !inboxSelected;
+
+                            bookingsSelected = false;
+                            homeSelected=false;
+                            profileSelected=false;
+                            helpCenterSelected=false;
+                            aboutUsSelected=false;
+                            settingsSelected=false;
+                          });
                         },
                         child: Container(
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: inboxSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -283,16 +335,27 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                       ),
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+                          setState(() {
+                            helpCenterSelected = !helpCenterSelected;
+
+
+                            homeSelected=false;
+                            inboxSelected = false;
+                            bookingsSelected = false;
+
+                            profileSelected=false;
+                            aboutUsSelected=false;
+                            settingsSelected=false;
+
+                          });
                         },
                         child: Container(
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: helpCenterSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -329,16 +392,26 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                       ),
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+                          setState(() {
+                            aboutUsSelected = !aboutUsSelected;
+
+                            homeSelected=false;
+                            inboxSelected = false;
+                            bookingsSelected = false;
+
+                            profileSelected=false;
+                            helpCenterSelected=false;
+                            settingsSelected=false;
+
+                          });
                         },
                         child: Container(
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: aboutUsSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -378,16 +451,24 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
 
                       InkWell(
                         onTap: (){
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Settings()),
-                          );
+                          setState(() {
+                            settingsSelected = !settingsSelected;
+                            homeSelected=false;
+                            inboxSelected = false;
+                            bookingsSelected = false;
+
+                            profileSelected=false;
+                            helpCenterSelected=false;
+                            aboutUsSelected=false;
+                          });
                         },
                         child: Container(
                           height: 55,
 
                           decoration: BoxDecoration(
-                            color: ColorsManager.grey40,
+                            color: settingsSelected==true
+                                ?ColorsManager.purple20
+                                :ColorsManager.grey40,
 
                             borderRadius: BorderRadius.circular(12),
                           ),

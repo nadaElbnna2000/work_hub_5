@@ -180,7 +180,6 @@ class ChangePassword extends StatelessWidget {
                     width: 220,
                   ),
                   Container(
-
                     height: 60,
                     width: 120,
                     alignment: Alignment.center,

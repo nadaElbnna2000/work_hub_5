@@ -8,6 +8,7 @@ import 'package:work_hub_5/view/edit_profile/edit_profile.dart';
 import 'package:work_hub_5/view/home/my_home_screen.dart';
 import 'package:work_hub_5/view/inbox/inbox_sreen.dart';
 import 'package:work_hub_5/view/login/login_screen.dart';
+import 'package:work_hub_5/view/rating/rating.dart';
 import 'package:work_hub_5/view/workSpace_home/workspace_home.dart';
 import 'package:work_hub_5/view/workspace_vacancy/WorkSpaceVacancyScreen.dart';
 
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: ColorsManager.primaryColor,
         primaryColor: ColorsManager.primaryColor,
       ),
-      home: BookingWorkspace(),
+      home: Ratingg(),
     );
     //kdkd
   }

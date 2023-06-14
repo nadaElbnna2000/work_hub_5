@@ -111,6 +111,7 @@ class  Ratingg extends StatelessWidget {
             ),
             Center(
               child: Container(
+
                 decoration: BoxDecoration(
                   color: Colors.deepPurple,
                   borderRadius: BorderRadius.circular(10),

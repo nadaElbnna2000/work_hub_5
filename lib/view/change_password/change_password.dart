@@ -103,11 +103,9 @@ class ChangePassword extends StatelessWidget {
                       ),
 
 
-
                       SizedBox(
                         height: 40,
                       ),
-
 
 
                       Text(
@@ -146,19 +144,6 @@ class ChangePassword extends StatelessWidget {
                           ),
                         ),
                       ),
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

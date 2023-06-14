@@ -52,12 +52,10 @@ class _WorkSpaceVacancyScreenState extends State<WorkSpaceVacancyScreen> {
             'assets/icons/menu.png',
                   ))
                   ,
-
                 ),
                   SizedBox(
                     width: 20,
                   ),
-
                   Text(
                       'WorkSpace Vacancy',
                     style: TextStyle(
@@ -65,16 +63,13 @@ class _WorkSpaceVacancyScreenState extends State<WorkSpaceVacancyScreen> {
                       fontWeight: FontWeight.w500,
                       fontSize: 30,
                     ),
-                      )
-
+                  )
                 ],
               ),
 
               SizedBox(
                   height: 20,
                 ),
-
-
               Container(
                width: 500,
               color: ColorsManager.grey40,

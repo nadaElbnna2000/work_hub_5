@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:work_hub_5/view/settings/settings.dart';
 
-import '../utils/colors_manager.dart';
+import '../../utils/colors_manager.dart';
 
 
 

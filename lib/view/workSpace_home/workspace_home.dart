@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:work_hub_5/view/abous-us/about_us.dart';
+import 'package:work_hub_5/view/workspace_vacancy/WorkSpaceVacancyScreen.dart';
 import '../../utils/colors_manager.dart';
 import '../home/my_home_screen.dart';
 import '../settings/settings.dart';
@@ -111,6 +113,10 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
                             aboutUsSelected=false;
                             settingsSelected=false;
 
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>  MyWorkSpaceHomeScreen()),
+                              );
                           });
                           // Navigator.push(
                           //   context,
@@ -286,6 +292,8 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
 
                         onTap: (){
                           setState(() {
+
+
                             workspaceVacancySelected = !workspaceVacancySelected;
 
                             workspaceInfoSelected = false;
@@ -294,6 +302,14 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
                             helpCenterSelected=false;
                             aboutUsSelected=false;
                             settingsSelected=false;
+
+
+
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>  WorkSpaceVacancyScreen()),
+                              );
+
                           });
                           // Navigator.push(
                           //   context,
@@ -416,6 +432,15 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
                             helpCenterSelected=false;
                             settingsSelected=false;
 
+
+
+
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) =>  AboutUs()),
+                            );
+
+
                           });
                           // Navigator.push(
                           //   context,
@@ -477,6 +502,17 @@ class _MyHomeScreenState extends State<MyWorkSpaceHomeScreen> {
                             profileSelected=false;
                             helpCenterSelected=false;
                             aboutUsSelected=false;
+
+
+
+
+
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) =>  Settings()),
+                            );
+
+
                           });
                           // Navigator.push(
                           //   context,

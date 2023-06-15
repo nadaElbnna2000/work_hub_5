@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:work_hub_5/view/home/my_home_screen.dart';
 
 import '../../utils/colors_manager.dart';
 import '../settings/settings.dart';
@@ -19,23 +20,21 @@ class Profile extends StatelessWidget {
             padding: const EdgeInsets.all(5.0),
             child: Row(
               children: [
-                IconButton(
-                    icon:Icon(
-                      Icons.arrow_back_ios_new_outlined
-                    ),
-                    iconSize: 30,
-                       color: ColorsManager.baseColor,
-                    // ImageIcon(
-                    //   AssetImage('assets/icons/arrow_back.png'),
-                    //   size: 250,
-                    //   color: ColorsManager.baseColor,
-                    // ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Settings()),
-                      );
-                    }),
+                InkWell(
+                  onTap: (){
+                    Navigator.pop(context);
+
+                  },
+                  child: Image(
+                    width: 75,
+                      height: 60,
+                      image: AssetImage
+                        (
+                      'assets/icons/arrow_back.png',
+
+                  )),
+                ),
+
               ],
             ),
           ),

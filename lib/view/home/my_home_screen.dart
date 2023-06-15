@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:work_hub_5/view/abous-us/about_us.dart';
+import 'package:work_hub_5/view/booking_workspace.dart';
+import 'package:work_hub_5/view/inbox/inbox_sreen.dart';
+import 'package:work_hub_5/view/profile/profile.dart';
 import '../../utils/colors_manager.dart';
 import '../settings/settings.dart';
 
@@ -43,11 +47,10 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
 
                 MaterialLocalizations.of(context).openAppDrawerTooltip;
               },
-              child: Image(image: AssetImage(
+              child: const Image(image: AssetImage(
 
                 'assets/icons/menu.png',
-              ))
-                ,
+              )),
 
             );
 
@@ -111,9 +114,12 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                             aboutUsSelected=false;
                             settingsSelected=false;
 
+
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) =>  MyHomeScreen()),
+                            );
                           });
-
-
 
                         },
                         child: Container(
@@ -176,6 +182,15 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                             settingsSelected=false;
 
                           });
+
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>  Profile()),
+                          );
+
+
+
+
                         },
                         child: Container(
 
@@ -233,6 +248,13 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                           });
 
 
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>  Profile()),
+                          );
+
+
+
 
                         },
                         child: Container(
@@ -287,6 +309,16 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                             helpCenterSelected=false;
                             aboutUsSelected=false;
                             settingsSelected=false;
+
+
+
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) =>  InboxScreen()),
+                            );
+
+
+
                           });
                         },
                         child: Container(
@@ -400,6 +432,17 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                             helpCenterSelected=false;
                             settingsSelected=false;
 
+
+
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) =>  AboutUs()),
+                            );
+
+
+
+
+
                           });
                         },
                         child: Container(
@@ -448,6 +491,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
 
                       InkWell(
                         onTap: (){
+
                           setState(() {
                             settingsSelected = !settingsSelected;
                             homeSelected=false;
@@ -457,6 +501,12 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                             profileSelected=false;
                             helpCenterSelected=false;
                             aboutUsSelected=false;
+
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>  Settings()),
+                              );
+
                           });
                         },
                         child: Container(

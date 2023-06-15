@@ -4,11 +4,14 @@ import 'package:work_hub_5/providers/auth_provider.dart';
 import 'package:work_hub_5/utils/colors_manager.dart';
 import 'package:work_hub_5/view/abous-us/about_us.dart';
 import 'package:work_hub_5/view/booking_workspace.dart';
+import 'package:work_hub_5/view/delete_account/delete_account.dart';
 import 'package:work_hub_5/view/edit_profile/edit_profile.dart';
 import 'package:work_hub_5/view/home/my_home_screen.dart';
 import 'package:work_hub_5/view/inbox/inbox_sreen.dart';
 import 'package:work_hub_5/view/login/login_screen.dart';
+import 'package:work_hub_5/view/profile/profile.dart';
 import 'package:work_hub_5/view/rating/rating.dart';
+import 'package:work_hub_5/view/settings/settings.dart';
 import 'package:work_hub_5/view/workSpace_home/workspace_home.dart';
 import 'package:work_hub_5/view/workspace_vacancy/WorkSpaceVacancyScreen.dart';
 
@@ -39,7 +42,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: ColorsManager.primaryColor,
         primaryColor: ColorsManager.primaryColor,
       ),
-      home: Ratingg(),
+      home: DeleteAccount(),
     );
     //kdkd
   }

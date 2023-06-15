@@ -39,6 +39,7 @@ class InboxScreen extends StatelessWidget {
                  width: 18,
                ),
 
+
                Text(
                  'Inbox',
                  style: TextStyle(

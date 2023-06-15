@@ -8,6 +8,7 @@ import '../../utils/padding_manager.dart';
 class ChoosePaymentMethodScreen extends StatefulWidget {
   ChoosePaymentMethodScreen({Key? key}) : super(key: key);
 
+
   @override
   State<ChoosePaymentMethodScreen> createState() =>
       _ChoosePaymentMethodScreenState();

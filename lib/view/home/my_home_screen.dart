@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:work_hub_5/view/abous-us/about_us.dart';
-import 'package:work_hub_5/view/booking_workspace.dart';
 import 'package:work_hub_5/view/inbox/inbox_sreen.dart';
 import 'package:work_hub_5/view/profile/profile.dart';
 import '../../utils/colors_manager.dart';

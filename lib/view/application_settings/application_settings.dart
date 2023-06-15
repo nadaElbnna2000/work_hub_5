@@ -40,7 +40,6 @@ class _ApplicationSettingsState extends State<ApplicationSettings> {
                 InkWell(
                   onTap: (){
                     Navigator.pop(context);
-
                   },
                   child: Image(
                       width: 75,

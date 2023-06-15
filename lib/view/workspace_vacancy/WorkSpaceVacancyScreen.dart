@@ -50,6 +50,7 @@ class _WorkSpaceVacancyScreenState extends State<WorkSpaceVacancyScreen> {
             'assets/icons/menu.png',
                   ))
                   ,
+
                 ),
                   SizedBox(
                     width: 20,

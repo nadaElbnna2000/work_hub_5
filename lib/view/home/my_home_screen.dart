@@ -31,7 +31,6 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
     return Scaffold(
 
       appBar: AppBar(
-
         backgroundColor: ColorsManager.white60,
         leading: Builder(
           builder: (BuildContext context) {

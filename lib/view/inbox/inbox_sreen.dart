@@ -10,6 +10,8 @@ class InboxScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
@@ -23,10 +25,8 @@ class InboxScreen extends StatelessWidget {
              children: [
                InkWell(
                  onTap: (){
-                   Navigator.push(
-                     context,
-                     MaterialPageRoute(builder: (context) => const Settings()),
-                   );
+                   Navigator.pop(context);
+
                  },
                  child: Image(
                    image:AssetImage(
@@ -38,6 +38,7 @@ class InboxScreen extends StatelessWidget {
                SizedBox(
                  width: 18,
                ),
+
 
                Text(
                  'Inbox',

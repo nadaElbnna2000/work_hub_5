@@ -16,24 +16,26 @@ class AboutUs extends StatelessWidget {
           children: [
 
             SizedBox(
-
               height: 25,
             ),
             Row(
               children: [
-                IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Settings()),
-                      );
-                    },
-                    color: ColorsManager.baseColor,
-                    icon: Icon(Icons.menu)
-                ),
+                InkWell(
+
+                onTap: (){
+
+                  Navigator.pop(context);
+
+                },
+                      child: const Image(image: AssetImage(
+
+                        'assets/icons/menu.png',
+                      )),
+
+      ),
 
                 SizedBox(
-                  width: 5,
+                  width: 20,
                 ),
                 Text(
                   'Abous Us',

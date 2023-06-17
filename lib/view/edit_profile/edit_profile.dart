@@ -43,10 +43,8 @@ class _EditProfileState extends State<EditProfile> {
 
                     InkWell(
                       onTap: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const Settings()),
-                        );
+                        Navigator.pop(context);
+
                       },
                       child: Image(
                         width: 60,

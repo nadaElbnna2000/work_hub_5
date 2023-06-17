@@ -37,15 +37,18 @@ class _ApplicationSettingsState extends State<ApplicationSettings> {
 
 
               children: [
-                IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Settings()),
-                      );
-                    },
-                    color: ColorsManager.baseColor,
-                    icon: Icon(Icons.arrow_back_ios_new)
+                InkWell(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Image(
+                      width: 75,
+                      height: 60,
+                      image: AssetImage
+                        (
+                        'assets/icons/arrow_back.png',
+
+                      )),
                 ),
 
                 SizedBox(
@@ -73,7 +76,7 @@ class _ApplicationSettingsState extends State<ApplicationSettings> {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Container(
-              width: 350,
+              width: 380,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(7)),
                 color: ColorsManager.light_grey_1,

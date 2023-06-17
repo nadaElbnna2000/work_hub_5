@@ -42,16 +42,15 @@ class _WorkSpaceVacancyScreenState extends State<WorkSpaceVacancyScreen> {
                   InkWell(
 
               onTap: (){
-                Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Settings()),
-                );
+                Navigator.pop(context);
+
               },
                   child: Image(image: AssetImage(
 
             'assets/icons/menu.png',
                   ))
                   ,
+
                 ),
                   SizedBox(
                     width: 20,

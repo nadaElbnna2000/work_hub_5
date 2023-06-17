@@ -37,8 +37,19 @@ class Desks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Column(
+
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        Text(
+          'Desks',
+          style: TextStyle(
+            color: ColorsManager.baseColor,
+            fontSize: 20,
+          ),
+        ),
+        SizedBox(
+          height: 3,
+        ),
         Container(
           height:300,
           child: ListView.separated(
@@ -83,7 +94,7 @@ class Desks extends StatelessWidget {
 
                       )
                   ),
-                  Text(' Capacity${De.capacity}',
+                  Text(' Capacity: ${De.capacity}',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
 

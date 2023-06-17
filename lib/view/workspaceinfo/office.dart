@@ -45,8 +45,19 @@ class Office extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Column(
+
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        Text(
+          'Offices',
+          style: TextStyle(
+            color: ColorsManager.baseColor,
+            fontSize: 20,
+          ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
         Container(
           height:300,
           child: ListView.separated(
@@ -92,7 +103,7 @@ class Office extends StatelessWidget {
 
                       )
                   ),
-                  Text(' Capacity${Of.capacity}',
+                  Text(' Capacity: ${Of.capacity}',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
 

@@ -142,6 +142,9 @@ class _workspacehomeinfoState extends State<workspacehomeinfo> {
                            ],
                      ),
                          ),
+                       SizedBox(
+                        height: 3,
+                      ),
 
 
                       screens[currentIndex],
@@ -168,7 +171,7 @@ class _workspacehomeinfoState extends State<workspacehomeinfo> {
     items:[
       BottomNavigationBarItem(icon:
           Image.asset('assets/icons/private.png'),
-       label:'Office',
+       label:'Rooms',
    ),
       BottomNavigationBarItem(icon:
       Image.asset('assets/icons/Desk.png'),
@@ -176,7 +179,7 @@ class _workspacehomeinfoState extends State<workspacehomeinfo> {
       ),
       BottomNavigationBarItem(icon:
       Image.asset('assets/icons/meeting.png'),
-        label:'Room',
+        label:'Offices',
       ),
       ],
     ),

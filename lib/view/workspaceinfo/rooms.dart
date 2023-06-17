@@ -48,9 +48,21 @@ class rooms extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       crossAxisAlignment: CrossAxisAlignment.center,
+
       children: [
+        Text(
+          'Rooms',
+          style: TextStyle(
+            color: ColorsManager.baseColor,
+            fontSize: 20,
+          ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
         Container(
           height:300,
+
           child: ListView.separated(
             itemBuilder: (context,index) => buildWorkSpaceroom (RO[index]),
             separatorBuilder:(context,index) => Container(
@@ -93,7 +105,7 @@ class rooms extends StatelessWidget {
 
                       )
                   ),
-                  Text(' Capacity${RO.capacity}',
+                  Text(' Capacity: ${RO.capacity}',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
 
